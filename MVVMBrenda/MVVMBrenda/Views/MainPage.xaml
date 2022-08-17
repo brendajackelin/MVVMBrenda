@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMBrenda.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Pink" >
+                <Label Text="AGREGAR - Brenda Garcia" HorizontalOptions="CenterAndExpand" />
+            </Frame>
+            <Grid Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Nombre:" Grid.Row="0" FontSize="18"/>
+                <Entry x:Name="txtNombre" Grid.Row="1" />
+
+                <Label Text="Apellidos:" Grid.Row="2" FontSize="18"/>
+                <Entry x:Name="txtApellidos" Grid.Row="3" />
+
+                <Label Text="Edad:" Grid.Row="4" FontSize="18"/>
+                <Entry x:Name="txtEdad" Grid.Row="5" Keyboard="Numeric"/>
+
+                <Label Text="Direccion:" Grid.Row="6" FontSize="18"/>
+                <Entry x:Name="txtDireccion" Grid.Row="7" />
+
+                <Label Text="Puesto:" Grid.Row="8" FontSize="18"/>
+                <Entry x:Name="txtPuesto" Grid.Row="9" />
+
+                <Button x:Name="btnAgregar" Grid.Row="10" Text="Agregar Empleado" 
+                         Clicked="btnAgregar_Clicked" BackgroundColor="Pink"
+                       />
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

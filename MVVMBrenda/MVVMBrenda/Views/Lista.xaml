@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMBrenda.Views.Lista">
+    <StackLayout>
+        <Frame BackgroundColor="Pink" >
+            <Label Text="Lista - Brenda Garcia" HorizontalOptions="CenterAndExpand" />
+        </Frame>
+        <ListView x:Name="ListViewEmpleados" ItemSelected="ListViewEmpleados_ItemSelected" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Nombre:" FontAttributes="Bold"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Nombre}"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Apellidos:" FontAttributes="Bold"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Apellidos}"/>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Edad:" FontAttributes="Bold"/>
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Edad}"/>
+                            <Label Grid.Row="3" Grid.Column="0" Text="Direccion:" FontAttributes="Bold"/>
+                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding Direccion}"/>
+                            <Label Grid.Row="4" Grid.Column="0" Text="Puesto:" FontAttributes="Bold"/>
+                            <Label Grid.Row="4" Grid.Column="1" Text="{Binding Puesto}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1" x:Name="btnEditar" Text="Seleccione un registro para editar o eliminar"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
